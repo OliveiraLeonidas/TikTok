@@ -1,0 +1,86 @@
+.videoFooter {
+    position: relative;
+    bottom: 22%;
+    color: white;
+    margin-left: 1.4rem;
+}
+
+.videoFooter__text h3 {
+    padding-bottom: 1rem;
+}
+
+.videoFooter__text p {
+    padding-bottom: 1.4rem;
+}
+
+.videoFooter_music {
+    display: flex;
+}
+
+.videoFooterMusic__text {
+    width: 80%;
+    overflow-x: hidden;
+}
+
+.videoFooterMusic__text p {
+    animation: slider-text 4000ms infinite linear;
+}
+
+.videoFooter__record {
+    position: absolute;
+    bottom: 10%;
+    right: 1rem;
+    width: 50px;
+    height: 50px;
+    animation: spin-vinil 3500ms infinite linear;
+    /* animation-name: spin-vinil;
+    animation-duration: 3500ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; */
+    filter: invert(0);
+}
+
+/* infinite slider text */
+@keyframes slider-text {
+  from {
+        transform: translateX(100%);
+  } 
+  to {
+        transform: translateX(-100%);
+  }
+}
+
+
+/* infinite rotate vinil */
+@keyframes spin-vinil {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .videoFooter {
+        bottom: 24%;
+      }
+  
+      .videoFooterMusic__text {
+          width: 75%;
+      }
+
+      .videoFooter__record {
+        right: 0.6rem;
+      }
+  }
+
+@media only screen and (max-width: 440px) {
+    .videoFooter {
+      bottom: 21%;
+    }
+
+    .videoFooterMusic__text {
+        width: 75%;
+    }
+  }
